@@ -1,0 +1,30 @@
+.deposit-wrapper {
+    max-width: 70%;
+    margin: 5% auto 0;
+}
+
+.deposit-details--card {
+    max-width: 30%;
+    margin: auto;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    background: darkmagenta;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.deposit-details--message {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.deposit-details--card p {
+    margin: 0.5rem 0;
+}
+
+.deposit-form--wrapper {
+    margin: 2rem;
+}
+
+.deposit-details--account-type {
+    text-transform: capitalize;
+}

@@ -32,7 +32,73 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.bms-form {
+  width: 50%;
+  margin: auto;
+}
+
+.bms-input--wrapper,
+.bms-select--wrapper {
+  width: 60%;
+  margin: auto;
+}
+
+.bms-input--wrapper label,
+.bms-select--wrapper label {
+  display: inherit;
+  text-align: left;
+}
+
+.bms-input--wrapper label {
+  margin-right: 2rem;
+}
+
+.bms-input--field,
+.bms-select--field {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.bms-input--field {
+  padding: 0.5rem 1rem;
+}
+
+.bms-select--field {
+  padding: 0.6rem 1rem;
+}
+
+.bms-input--field:active,
+.bms-input--field:focus,
+.bms-select--field:active,
+.bms-select--field:focus {
+  outline: 1px solid red;
+}
+
+.bms-form-error-message {
+  text-align: left;
+  padding-left: 1rem;
+  margin: 0 0 0.2rem 0;
+  color: red;
+}
+
+.cta-submit {
+  text-decoration: none;
+  color: #fff;
+  background: darkmagenta;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  border: 0;
+  margin: 1rem;
+  font-size: 1rem;
+}
+
+.cta-submit:hover {
+  background: initial;
+  border: 1px solid #fff;
 }
