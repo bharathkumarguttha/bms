@@ -9,7 +9,7 @@ const depositReducer = (state = initialState, action) => {
                 availableBalance: state.availableBalance + action.amount
             }
         default:
-            return initialState
+            return state;
     }
 }
 

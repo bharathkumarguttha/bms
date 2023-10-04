@@ -6,6 +6,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Loan from './components/Loan/Loan';
 import Deposit from './components/Deposit/Deposit';
 import './App.css';
+import { useEffect } from 'react';
 
 function App() {
   return (

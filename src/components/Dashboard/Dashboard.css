@@ -59,3 +59,20 @@
     background: initial;
     border: 1px solid #fff;
 }
+
+.loan-details-wrapper {
+    width: fit-content;
+    background: darkmagenta;
+    margin: 2.5rem auto;
+    padding: 1.25rem;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.loan-details--header {
+    margin-top: 0;
+}
+
+.loan-details--type {
+    text-transform: capitalize;
+}

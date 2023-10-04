@@ -31,7 +31,7 @@ export default function Login() {
 
     return (
         <div className='login-info--wrapper'>
-            <h1 className='login-info--header'>Log into BMS below</h1>
+            <h1 className='login-info--header' data-testid="login-header">Log into BMS below</h1>
             <form onSubmit={handleSubmit(onSubmit)} className='bms-form'>
                 <div className='bms-input--wrapper'>
                     <label>

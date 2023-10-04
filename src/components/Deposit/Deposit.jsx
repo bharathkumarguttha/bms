@@ -32,7 +32,10 @@ export default function Deposit() {
     }
     return (
         <div className='deposit-wrapper'>
-            <h1 className='deposit-wrapper--header'>You can deposit and check the available balance below</h1>
+            <header className='dashboard-header'>
+                <button className='cta-logout' onClick={() => navigate('/dashboard')}>Back to Dashboard</button>
+            </header>
+            <h1 className='deposit-wrapper--header' data-testid="deposit-header">You can deposit and check the available balance below</h1>
             <div className='deposit-details--card'>
                 <h3 className='deposit-details--message'>Deposit Information</h3>
                 <p className='deposit-details--account-type'>Account Type : {currentUser?.accounttype}</p>
@@ -46,6 +49,7 @@ export default function Deposit() {
                             <input
                                 {...register("depositamount", { required: 'Deposit Amount is required' })}
                                 className='bms-input--field'
+                                type="number"
                             />
                         </label>
                         {errors.depositamount && (

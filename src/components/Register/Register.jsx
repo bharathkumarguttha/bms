@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import { getCountries, getStates } from 'country-state-picker';
 import { useNavigate } from 'react-router-dom';
@@ -61,10 +61,14 @@ export default function Register() {
         alert("Registration succesful, redirecting to home page to login");
         navigate('/')
     }
+    useEffect(() => {
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementsByClassName("bms-input--field-date")[0].setAttribute('max', today);
+    }, [])
 
     return (
         <div className='registration-info--wrapper'>
-            <h1 className='registration-info--header'>Register with us by entering below details</h1>
+            <h1 className='registration-info--header' data-testid="registration-header" >Register with us by entering below details</h1>
             <form onSubmit={handleSubmit(onSubmit)} className='bms-form'>
                 <div className='bms-input--wrapper'>
                     <label>Customer Name:
@@ -166,7 +170,7 @@ export default function Register() {
                         Enter Date Of Birth
                         <input
                             {...register("dob", { required: 'Date of birth is required' })}
-                            className='bms-input--field'
+                            className='bms-input--field bms-input--field-date'
                             type="date"
                         />
                     </label>
@@ -204,6 +208,8 @@ export default function Register() {
                         <input
                             {...register("initialdeposit", { required: 'Initial deposit is required' })}
                             className='bms-input--field'
+                            type="number"
+                            min={0}
                         />
                     </label>
                     {errors.initialdeposit && (
